@@ -1,0 +1,31 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Scan') {
+            steps {
+                echo 'Scan the code' 
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Build the source code' 
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Run tests from the source code' 
+            }
+        }
+    
+        stage('Deploy') {
+            steps {
+                echo 'Deploy Start' 
+            }
+        }
+        stage('Archive') {
+            steps {
+                echo 'Archive' 
+            }
+        }
+    }
+}
